@@ -1,0 +1,29 @@
+Roboty maluj¹ p³oty.
+Klasa Robot opisuje robota maluj¹cego p³ot.
+Ma on dwie metody publiczne:
+- GetPaintedLength(time): zwraca d³ugoœæ odcinka p³oty pomalowanego w danej jednostce czasu (w metrach)
+- ToString(): wiadomo
+
+W celu zwiêkszenia efektywnoœci pracy, roboty mog¹ byæ ulepszane. Celem zadanie jest zaprojektowanie i implementacja mo¿liwoœci takich ulepszeñ. Ulepszenia mog¹ byæ sk³adane.
+
+1. Ulepszenie addytywne. Robot maluje 1m p³otu wiêcej (niezale¿nie od czasu, taki dziwny robot).
+2. To samo, tylko tym razem malujemy o n metrów wiêcej, gdzie n jest sta³¹ okreœlon¹ w konstruktorze.
+3. Ulepszenie multiplikatywne. Robot maluje dwa razy wiêcej.
+4. To samo, tylko robot maluje n razy wiêcej, gdzie n jest sta³¹ okreœlon¹ w konstruktorze.
+5. Ulepszenie NLogN: robot maluje (n log n) jednostek, gdzie n jest wartoœci¹ sprzed ulepszenia.
+6. Zastosowane ulepszenia musz¹ byæ widoczne po wywo³aniu metody ToString(). Czyli spodziewamy siê napisu typu: n log n version of ((basic robot), 2 times more efficient). U¿ywaj nawiasów, aby unikn¹æ niejednoznacznoœci.
+7. Z kilku robotów mo¿emy z³o¿yæ nowego robota. Jego efektywnoœæ to max z efektywnoœci czêœci sk³adowych.
+Metoda ToString() powinna produkowaæ napis typu:
+
+compound robot, max of:
+	(basic robot)
+	(basic robot, 2 times faster)
+	n log n version of (compound robot, max of:
+		(basic robot)
+		(basic robot)
+	)
+
+Wciêcia nie s¹ kluczowe, ale u¿yteczne
+
+8. Analogicznie jak wczeœniej, ale tym razem efektywnoœæ robota to suma efektywnoœci komponentów sk³adowych.
+9. Powinna byæ mo¿liwoœæ stworzenia dowolnej kombinacji zachowañ zdefiniowanych powy¿ej. Ponadto, rozwi¹zanie powinno dawaæ siê roszczerzyæ do innych tego typu funkcjonalnoœci.
